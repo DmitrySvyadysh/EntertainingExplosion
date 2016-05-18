@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntertainingExplosion", "EntertainingExplosion\EntertainingExplosion.csproj", "{6A7C84E8-41F7-4760-9C8D-BD0676B7FA3B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0E1EEDD-D6C0-43E1-BCAA-228590134197} = {B0E1EEDD-D6C0-43E1-BCAA-228590134197}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntertainingExplosion.Core", "EntertainingExplosion.Core\EntertainingExplosion.Core.csproj", "{B0E1EEDD-D6C0-43E1-BCAA-228590134197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{6A7C84E8-41F7-4760-9C8D-BD0676B7FA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A7C84E8-41F7-4760-9C8D-BD0676B7FA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A7C84E8-41F7-4760-9C8D-BD0676B7FA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E1EEDD-D6C0-43E1-BCAA-228590134197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E1EEDD-D6C0-43E1-BCAA-228590134197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E1EEDD-D6C0-43E1-BCAA-228590134197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E1EEDD-D6C0-43E1-BCAA-228590134197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
