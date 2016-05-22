@@ -117,13 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DeltaTimeInfoFormat" xml:space="preserve">
+    <value>Delta Time: {0}</value>
+  </data>
+  <data name="Density" xml:space="preserve">
+    <value>Density</value>
+  </data>
+  <data name="DensityPlotTitle" xml:space="preserve">
+    <value>Density plot</value>
+  </data>
+  <data name="HeatCapacityRatioInfoFormat" xml:space="preserve">
+    <value>Heat capacity ratio: {0}</value>
+  </data>
+  <data name="InternalEnergy" xml:space="preserve">
+    <value>Internal energy</value>
+  </data>
+  <data name="InternalEnergyPlotTitle" xml:space="preserve">
+    <value>Internal energy plot</value>
+  </data>
+  <data name="MolarMassInfoFormat" xml:space="preserve">
+    <value>Molar mass: {0}</value>
+  </data>
+  <data name="Pressure" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="PressurePlotTitle" xml:space="preserve">
+    <value>Pressure plot</value>
+  </data>
   <data name="Radius" xml:space="preserve">
     <value>Radius</value>
+  </data>
+  <data name="SizeInfoFormat" xml:space="preserve">
+    <value>Size: {0}</value>
+  </data>
+  <data name="Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="SpeedPlotTitle" xml:space="preserve">
+    <value>Speed plot</value>
   </data>
   <data name="Temperature" xml:space="preserve">
     <value>Temperature</value>
   </data>
   <data name="TemperaturePlotTitle" xml:space="preserve">
     <value>Temperature plot</value>
+  </data>
+  <data name="TicksCountInfoFormat" xml:space="preserve">
+    <value>Ticks count: {0}</value>
   </data>
 </root>

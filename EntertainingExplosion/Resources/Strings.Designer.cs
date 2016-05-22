@@ -61,11 +61,119 @@ namespace EntertainingExplosion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delta Time: {0}.
+        /// </summary>
+        internal static string DeltaTimeInfoFormat {
+            get {
+                return ResourceManager.GetString("DeltaTimeInfoFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Density.
+        /// </summary>
+        internal static string Density {
+            get {
+                return ResourceManager.GetString("Density", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Density plot.
+        /// </summary>
+        internal static string DensityPlotTitle {
+            get {
+                return ResourceManager.GetString("DensityPlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat capacity ratio: {0}.
+        /// </summary>
+        internal static string HeatCapacityRatioInfoFormat {
+            get {
+                return ResourceManager.GetString("HeatCapacityRatioInfoFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal energy.
+        /// </summary>
+        internal static string InternalEnergy {
+            get {
+                return ResourceManager.GetString("InternalEnergy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Internal energy plot.
+        /// </summary>
+        internal static string InternalEnergyPlotTitle {
+            get {
+                return ResourceManager.GetString("InternalEnergyPlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Molar mass: {0}.
+        /// </summary>
+        internal static string MolarMassInfoFormat {
+            get {
+                return ResourceManager.GetString("MolarMassInfoFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pressure.
+        /// </summary>
+        internal static string Pressure {
+            get {
+                return ResourceManager.GetString("Pressure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pressure plot.
+        /// </summary>
+        internal static string PressurePlotTitle {
+            get {
+                return ResourceManager.GetString("PressurePlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Radius.
         /// </summary>
         internal static string Radius {
             get {
                 return ResourceManager.GetString("Radius", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size: {0}.
+        /// </summary>
+        internal static string SizeInfoFormat {
+            get {
+                return ResourceManager.GetString("SizeInfoFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed.
+        /// </summary>
+        internal static string Speed {
+            get {
+                return ResourceManager.GetString("Speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Speed plot.
+        /// </summary>
+        internal static string SpeedPlotTitle {
+            get {
+                return ResourceManager.GetString("SpeedPlotTitle", resourceCulture);
             }
         }
         
@@ -84,6 +192,15 @@ namespace EntertainingExplosion.Resources {
         internal static string TemperaturePlotTitle {
             get {
                 return ResourceManager.GetString("TemperaturePlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ticks count: {0}.
+        /// </summary>
+        internal static string TicksCountInfoFormat {
+            get {
+                return ResourceManager.GetString("TicksCountInfoFormat", resourceCulture);
             }
         }
     }

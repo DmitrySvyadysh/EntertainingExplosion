@@ -9,7 +9,7 @@ namespace EntertainingExplosion
         {
             base.Load(builder);
 
-            builder.RegisterType<PrimitiveInitialProcessCreator>()
+            builder.RegisterType<SimpleInitialProcessCreator>()
                 .AsImplementedInterfaces();
         }
     }

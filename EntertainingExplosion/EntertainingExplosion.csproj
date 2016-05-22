@@ -69,6 +69,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="UserInterface\CommandHandler.cs" />
+    <Compile Include="ViewModels\PlotViewModel.cs" />
+    <Compile Include="Views\PlotView.xaml.cs">
+      <DependentUpon>PlotView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Resources.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,9 +89,10 @@
     </Compile>
     <Compile Include="ApplicationContainer.cs" />
     <Compile Include="EntertainingExplosionModule.cs" />
-    <Compile Include="Helpers\OxyPlotHelper.cs" />
+    <Compile Include="Helpers\PlotHelper.cs" />
     <Compile Include="InitialData\IInitialProcessCreator.cs" />
-    <Compile Include="InitialData\PrimitiveInitialProcessCreator.cs" />
+    <Compile Include="InitialData\SimpleInitialProcessCreator.cs" />
+    <Compile Include="Models\PlotModel.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Resources\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -100,6 +107,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\PlotView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -133,9 +144,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\EntertainingExplosion.Core\EntertainingExplosion.Core.csproj">
       <Project>{B0E1EEDD-D6C0-43E1-BCAA-228590134197}</Project>

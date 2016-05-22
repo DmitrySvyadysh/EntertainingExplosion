@@ -3,19 +3,21 @@ using EntertainingExplosion.Core.Models;
 
 namespace EntertainingExplosion.InitialData
 {
-    public class PrimitiveInitialProcessCreator : IInitialProcessCreator
+    public class SimpleInitialProcessCreator : IInitialProcessCreator
     {
-        private const double Density = 1.2;
         private const double MolarMass = 0.029;
         private const double HeatCapacityRatio = 1.4;
         private const double Size = 0.01;
 
         private const int ExplosionCellsCount = 100;
-        private const int UsualCellsCount = 900;
-        private const double ExplosionCellTemperature = 1000;
-        private const double UsualCellTemperature = 20;
+        private const double ExplosionCellTemperature = 300;
+        private const double ExplosionCellDensity = 1.5;
 
-        private const double DeltaTime = 0.01;
+        private const int UsualCellsCount = 900;
+        private const double UsualCellTemperature = 300;
+        private const double UsualCellDensity = 1.2;
+
+        private const double DeltaTime = 0.001;
         private const int TicksCount = 1000;
 
         public InitialProcess CreateInitialProcess()
@@ -51,7 +53,7 @@ namespace EntertainingExplosion.InitialData
             var explosionInitialCells = new List<InitialCell>(ExplosionCellsCount);
             for (int i = 0; i < ExplosionCellsCount; i++)
             {
-                explosionInitialCells.Add(CreateInitialCell(ExplosionCellTemperature));
+                explosionInitialCells.Add(CreateInitialCell(ExplosionCellTemperature, ExplosionCellDensity));
             }
 
             return explosionInitialCells;
@@ -62,7 +64,7 @@ namespace EntertainingExplosion.InitialData
             var usualInitialCells = new List<InitialCell>(UsualCellsCount);
             for (int i = 0; i < UsualCellsCount; i++)
             {
-                usualInitialCells.Add(CreateInitialCell(UsualCellTemperature));
+                usualInitialCells.Add(CreateInitialCell(UsualCellTemperature, UsualCellDensity));
             }
 
             return usualInitialCells;
@@ -70,14 +72,14 @@ namespace EntertainingExplosion.InitialData
 
         private InitialCell CreateExternalCell()
         {
-            return CreateInitialCell(UsualCellTemperature);
+            return CreateInitialCell(UsualCellTemperature, UsualCellDensity);
         }
 
-        private InitialCell CreateInitialCell(double temperature)
+        private InitialCell CreateInitialCell(double temperature, double density)
         {
             return new InitialCell
             {
-                Density = Density,
+                Density = density,
                 MolarMass = MolarMass,
                 HeatCapacityRatio = HeatCapacityRatio,
                 Size = Size,
