@@ -13,7 +13,7 @@ namespace EntertainingExplosion.Core.Utils
             return (molarMass * pressure) / (density * PhysicalConstants.R);
         }
 
-        public static double GetInternalEnergy(
+        public static double GetEnergy(
             double pressure,
             double density,
             double heatCapacityRatio,
@@ -55,7 +55,7 @@ namespace EntertainingExplosion.Core.Utils
                 ((oldPressureHalfNext - oldPressureHalfPrev) * deltaTime) / (size * oldDensity);
         }
 
-        public static double GetNewInternalEnergy(
+        public static double GetNewEnergy(
             double oldInternalEnergy,
             double oldPressure,
             double oldPressureNext,

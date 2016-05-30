@@ -88,29 +88,29 @@ namespace EntertainingExplosion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Energy.
+        /// </summary>
+        internal static string Energy {
+            get {
+                return ResourceManager.GetString("Energy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Energy plot.
+        /// </summary>
+        internal static string EnergyPlotTitle {
+            get {
+                return ResourceManager.GetString("EnergyPlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Heat capacity ratio: {0}.
         /// </summary>
         internal static string HeatCapacityRatioInfoFormat {
             get {
                 return ResourceManager.GetString("HeatCapacityRatioInfoFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Internal energy.
-        /// </summary>
-        internal static string InternalEnergy {
-            get {
-                return ResourceManager.GetString("InternalEnergy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Internal energy plot.
-        /// </summary>
-        internal static string InternalEnergyPlotTitle {
-            get {
-                return ResourceManager.GetString("InternalEnergyPlotTitle", resourceCulture);
             }
         }
         

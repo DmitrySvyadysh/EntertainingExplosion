@@ -48,11 +48,11 @@ namespace EntertainingExplosion.Core.Engine
             newCell.Speed = GasDynUtils.GetNewSpeed(oldCell.Speed, oldCell.Pressure, oldCellNext.Pressure,
                 oldCellPrev.Pressure, oldCell.Density, oldCell.Size, deltaTime);
 
-            newCell.InternalEnergy = GasDynUtils.GetNewInternalEnergy(oldCell.InternalEnergy, oldCell.Pressure,
+            newCell.Energy = GasDynUtils.GetNewEnergy(oldCell.Energy, oldCell.Pressure,
                 oldCellNext.Pressure,oldCellPrev.Pressure, oldCell.Speed, oldCellNext.Speed, 
                 oldCellPrev.Speed, oldCell.Density, oldCell.Size, deltaTime);
 
-            newCell.Pressure = GasDynUtils.GetPressure(newCell.Density, newCell.InternalEnergy, newCell.Speed,
+            newCell.Pressure = GasDynUtils.GetPressure(newCell.Density, newCell.Energy, newCell.Speed,
                 newCell.HeatCapacityRatio);
 
             newCell.Temperature = GasDynUtils.GetTemperature(newCell.MolarMass, newCell.Pressure, newCell.Density);
@@ -73,7 +73,7 @@ namespace EntertainingExplosion.Core.Engine
                 Speed = oldExternalCell.Speed
             };
 
-            newExternalCell.InternalEnergy = GasDynUtils.GetNewInternalEnergy(oldExternalCell.InternalEnergy,
+            newExternalCell.Energy = GasDynUtils.GetNewEnergy(oldExternalCell.Energy,
                 oldExternalCell.Pressure, 0, oldCellPrev.Pressure, oldExternalCell.Speed, 0, 
                 oldCellPrev.Speed, oldExternalCell.Density, oldExternalCell.Size, deltaTime);
 

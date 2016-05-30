@@ -126,14 +126,14 @@
   <data name="DensityPlotTitle" xml:space="preserve">
     <value>Density plot</value>
   </data>
+  <data name="Energy" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="EnergyPlotTitle" xml:space="preserve">
+    <value>Energy plot</value>
+  </data>
   <data name="HeatCapacityRatioInfoFormat" xml:space="preserve">
     <value>Heat capacity ratio: {0}</value>
-  </data>
-  <data name="InternalEnergy" xml:space="preserve">
-    <value>Internal energy</value>
-  </data>
-  <data name="InternalEnergyPlotTitle" xml:space="preserve">
-    <value>Internal energy plot</value>
   </data>
   <data name="MolarMassInfoFormat" xml:space="preserve">
     <value>Molar mass: {0}</value>

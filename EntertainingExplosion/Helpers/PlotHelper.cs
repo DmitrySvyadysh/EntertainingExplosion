@@ -58,10 +58,10 @@ namespace EntertainingExplosion.Helpers
         {
             return new PlotModel
             {
-                PlotName = Strings.InternalEnergyPlotTitle,
+                PlotName = Strings.EnergyPlotTitle,
                 AbscissaName = Strings.Radius,
-                OrdinateName = Strings.InternalEnergy,
-                Points = CreateDataPoints(grid, c => c.InternalEnergy)
+                OrdinateName = Strings.Energy,
+                Points = CreateDataPoints(grid, c => c.Energy)
             };
         }
 

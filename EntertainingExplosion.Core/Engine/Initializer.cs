@@ -38,7 +38,7 @@ namespace EntertainingExplosion.Core.Engine
             };
 
             cell.Pressure = GasDynUtils.GetPressure(cell.Density, cell.MolarMass, cell.Temperature);
-            cell.InternalEnergy = GasDynUtils.GetInternalEnergy(cell.Pressure, cell.Density, 
+            cell.Energy = GasDynUtils.GetEnergy(cell.Pressure, cell.Density, 
                 cell.HeatCapacityRatio, cell.Speed);
 
             return cell;

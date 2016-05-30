@@ -10,7 +10,7 @@
 
         public double Pressure { get; set; }
 
-        public double InternalEnergy { get; set; }
+        public double Energy { get; set; }
 
         public double Temperature { get; set; }
 

@@ -36,7 +36,7 @@ namespace EntertainingExplosion.Core.Helpers
                 MolarMass = MathUtils.GetAverage(firstCell.MolarMass, secondCell.MolarMass),
                 HeatCapacityRatio = MathUtils.GetAverage(firstCell.HeatCapacityRatio, secondCell.HeatCapacityRatio),
                 Pressure = MathUtils.GetAverage(firstCell.Pressure, secondCell.Pressure),
-                InternalEnergy = MathUtils.GetAverage(firstCell.InternalEnergy, secondCell.InternalEnergy),
+                Energy = MathUtils.GetAverage(firstCell.Energy, secondCell.Energy),
                 Temperature = MathUtils.GetAverage(firstCell.Temperature, secondCell.Temperature),
                 Size = MathUtils.GetAverage(firstCell.Size, secondCell.Size),
                 Speed = MathUtils.GetAverage(firstCell.Speed, secondCell.Speed)

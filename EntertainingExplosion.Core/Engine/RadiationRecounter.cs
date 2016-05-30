@@ -20,7 +20,7 @@ namespace EntertainingExplosion.Core.Engine
             return prevI * Math.Exp(-dist * coef);
         }
 
-        public static double initializeBounds(int param, Grid oldGrid, double prevI,double r)
+        public static double InitializeBounds(int param, Grid oldGrid, double prevI,double r)
         {
             double I = Burger(prevI, RadiationGrid.stepR, absorbCoef) +
                     timeCoef * absorbCoef *
@@ -45,7 +45,7 @@ namespace EntertainingExplosion.Core.Engine
             for (double r = RadiationGrid.R - RadiationGrid.stepR; r >= 0; r -= RadiationGrid.stepR)
             {
                 double prevI = RadiationGrid.GetIntensity(r + RadiationGrid.stepR, -1);
-                double I = initializeBounds(-1, oldGrid, prevI, r);
+                double I = InitializeBounds(-1, oldGrid, prevI, r);
                 RadiationGrid.SetIntensity(r, -1, I);
             }
 
@@ -54,18 +54,18 @@ namespace EntertainingExplosion.Core.Engine
             for (double r = RadiationGrid.stepR; r <= RadiationGrid.R; r += RadiationGrid.stepR)
             {
                 double prevI = RadiationGrid.GetIntensity(r - RadiationGrid.stepR, 1);
-                double I = initializeBounds(1, oldGrid, prevI, r - RadiationGrid.stepR);
+                double I = InitializeBounds(1, oldGrid, prevI, r - RadiationGrid.stepR);
                 RadiationGrid.SetIntensity(r, 1, I);
             }
-            if (!b)
-            {
-                for (double r = 0; r <= RadiationGrid.R; r += RadiationGrid.stepR)
-                {
-                    for (double fi = -1; fi < 1; fi += RadiationGrid.stepFi)
-                        System.Diagnostics.Debug.WriteLine(RadiationGrid.GetIntensity(r, fi));
-                }
-            }
-            b = true;
+            //if (!b)
+            //{
+            //    for (double r = 0; r <= RadiationGrid.R; r += RadiationGrid.stepR)
+            //    {
+            //        for (double fi = -1; fi < 1; fi += RadiationGrid.stepFi)
+            //            System.Diagnostics.Debug.WriteLine(RadiationGrid.GetIntensity(r, fi));
+            //    }
+            //}
+            //b = true;
             return oldGrid;
         }
     }
