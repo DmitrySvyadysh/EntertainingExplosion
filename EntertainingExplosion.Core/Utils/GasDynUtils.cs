@@ -76,5 +76,25 @@ namespace EntertainingExplosion.Core.Utils
             return oldInternalEnergy -
                    ((oldPressureHalfNext * oldSpeedHalfNext - oldPressureHalfPrev * oldSpeedHalfPrev) * deltaTime) / (size * oldDensity);
         }
+
+        public static double GetNewDensity(
+            double oldDensity,
+            double oldDensityNext,
+            double oldDensityPrev,
+            double oldSpeed,
+            double oldSpeedNext,
+            double oldSpeedPrev,
+            double size,
+            double deltaTime)
+        {
+            double oldDensityHalfNext = MathUtils.GetAverage(oldDensity, oldDensityNext);
+            double oldDensityHalfPrev = MathUtils.GetAverage(oldDensity, oldDensityPrev);
+
+            double oldSpeedHalfNext = MathUtils.GetAverage(oldSpeed, oldSpeedNext);
+            double oldSpeedHalfPrev = MathUtils.GetAverage(oldSpeed, oldSpeedPrev);
+
+            return oldDensity -
+                   ((oldDensityHalfNext * oldSpeedHalfNext - oldDensityHalfPrev * oldSpeedHalfPrev) * deltaTime) / (size);
+        }
     }
 }
