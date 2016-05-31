@@ -21,18 +21,11 @@
       <RowDefinition Height="1*" />
     </Grid.RowDefinitions>
 
-    <StackPanel Grid.Row="0" Grid.Column="0" Margin="85, 40">
-      <StackPanel.Resources>
-        <Style TargetType="TextBlock">
-          <Setter Property="FontSize" Value="22" />
-        </Style>
-      </StackPanel.Resources>
-      <TextBlock Text="{Binding MolarMassInfo}"/>
-      <TextBlock Text="{Binding HeatCapacityRatioInfo}"/>
-      <TextBlock Text="{Binding SizeInfo}"/>
-      <TextBlock Text="{Binding DeltaTimeInfo}"/>
-      <TextBlock Text="{Binding TicksCountInfo}"/>
-    </StackPanel>
+    <views:PlotView PlotModel="{Binding RelativeSource={RelativeSource AncestorType=views:MainWindow}, 
+                      Path=DataContext.IzlucheniePlotModel, Mode=TwoWay}"
+                    Grid.Column="0" 
+                    Grid.Row="0" 
+                    Padding="10"/>
       
     <views:PlotView PlotModel="{Binding RelativeSource={RelativeSource AncestorType=views:MainWindow}, 
                       Path=DataContext.TemperaturePlotModel, Mode=TwoWay}"

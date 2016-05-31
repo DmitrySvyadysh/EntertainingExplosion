@@ -115,6 +115,24 @@ namespace EntertainingExplosion.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Izluchenie.
+        /// </summary>
+        internal static string Izluchenie {
+            get {
+                return ResourceManager.GetString("Izluchenie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Izluchenie plot.
+        /// </summary>
+        internal static string IzlucheniePlotTitle {
+            get {
+                return ResourceManager.GetString("IzlucheniePlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Molar mass: {0}.
         /// </summary>
         internal static string MolarMassInfoFormat {

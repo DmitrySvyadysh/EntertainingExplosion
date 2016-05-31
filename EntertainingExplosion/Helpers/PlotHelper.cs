@@ -54,7 +54,7 @@ namespace EntertainingExplosion.Helpers
             };
         }
 
-        public static PlotModel CreateInternalEnergyPlot(Grid grid)
+        public static PlotModel CreateEnergyPlot(Grid grid)
         {
             return new PlotModel
             {
@@ -62,6 +62,17 @@ namespace EntertainingExplosion.Helpers
                 AbscissaName = Strings.Radius,
                 OrdinateName = Strings.Energy,
                 Points = CreateDataPoints(grid, c => c.Energy)
+            };
+        }
+
+        public static PlotModel CreateIzlucheniePlot(Grid grid)
+        {
+            return new PlotModel
+            {
+                PlotName = Strings.IzlucheniePlotTitle,
+                AbscissaName = Strings.Radius,
+                OrdinateName = Strings.Izluchenie,
+                Points = CreateDataPoints(grid, c => c.Izluchenie)
             };
         }
 
