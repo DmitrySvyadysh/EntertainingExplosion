@@ -36,14 +36,11 @@ namespace EntertainingExplosion.Core.Engine
         {
             var newCell = new Cell
             {
+                Density = oldCell.Density,
                 HeatCapacityRatio = oldCell.HeatCapacityRatio,
                 MolarMass = oldCell.MolarMass,
                 Size = oldCell.Size
             };
-
-            newCell.Density = GasDynUtils.GetNewDensity(oldCell.Density, oldCellNext.Density,
-                oldCellPrev.Density, oldCell.Speed, oldCellNext.Speed, oldCellPrev.Speed,
-                oldCell.Size, deltaTime);
 
             newCell.Speed = GasDynUtils.GetNewSpeed(oldCell.Speed, oldCell.Pressure, oldCellNext.Pressure,
                 oldCellPrev.Pressure, oldCell.Density, oldCell.Size, deltaTime);
