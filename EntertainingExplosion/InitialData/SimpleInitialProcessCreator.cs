@@ -7,18 +7,18 @@ namespace EntertainingExplosion.InitialData
     {
         private const double MolarMass = 0.029;
         private const double HeatCapacityRatio = 1.4;
-        private const double Size = 0.1;
+        private const double Size = 1;
 
-        private const int ExplosionCellsCount = 20;
-        private const double ExplosionCellTemperature = 300;
-        private const double ExplosionCellDensity = 1.5;
+        private const int ExplosionCellsCount = 10;
+        private const double ExplosionCellTemperature = 10000;
+        private const double ExplosionCellDensity = 1.29;
 
-        private const int UsualCellsCount = 80;
+        private const int UsualCellsCount = 40;
         private const double UsualCellTemperature = 300;
-        private const double UsualCellDensity = 1.2;
+        private const double UsualCellDensity = 1.29;
 
-        private const double DeltaTime = 0.000001;
-        private const int TicksCount = 100000;
+        private const double DeltaTime = 0.00005;
+        private const int TicksCount = 1000;
 
         public InitialProcess CreateInitialProcess()
         {
