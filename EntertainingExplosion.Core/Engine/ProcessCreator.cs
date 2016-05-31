@@ -29,7 +29,7 @@ namespace EntertainingExplosion.Core.Engine
 
         public Process CreateProcess()
         {
-            InitializeRadiation(0.1);
+            InitializeRadiation(0.2);
             
             for (int i = 0; i < ticksCount - 1; i++)
             {
