@@ -54,6 +54,8 @@ namespace EntertainingExplosion.Core.Engine
         public static double NewTemperature(double EnergyChange, Cell c, int i)
         {
             double temp = (InnerEnergy(c, i) + EnergyChange) / (Square(i, c.Size) * c.MolarMass * 8.31 * 5 / 2);
+            if (temp < 0)
+                temp = 0;
             return temp;
         }
 
@@ -66,8 +68,8 @@ namespace EntertainingExplosion.Core.Engine
 
         public static Grid CreateNewGrid(Grid oldGrid, double deltaTime)
         {
-            timeCoef = deltaTime * Math.Pow(10,-11);
-            absorbCoef = 0.05;
+            timeCoef = deltaTime * Math.Pow(10,-12);
+            absorbCoef = 0.1;
             ellipseCoef = 0.4;
 
             for (double cosFi = -1; cosFi <= 0; cosFi += RadiationGrid.stepFi)
@@ -124,11 +126,6 @@ namespace EntertainingExplosion.Core.Engine
                     }
 
                     double dist = Distance(r, cosFi, suppressionR, -Math.Sqrt(1 - Math.Pow(suppressionFi, 2)));
-                    /*if (!b)
-                    {
-                        System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", r, cosFi, suppressionR, -Math.Sqrt(1 - Math.Pow(suppressionFi, 2)));
-                        System.Diagnostics.Debug.WriteLine(dist);
-                    }*/
                     double I = Burger(prevI, dist, absorbCoef) +
                     timeCoef * AnglePart(cosFi + RadiationGrid.stepFi / 2, cosFi - RadiationGrid.stepFi/2) *
                     Square((int)Math.Round(r / RadiationGrid.stepR), RadiationGrid.stepR) *
@@ -180,12 +177,6 @@ namespace EntertainingExplosion.Core.Engine
                     }
 
                     double dist = Distance(r, cosFi, suppressionR, Math.Sqrt(1 - Math.Pow(suppressionFi, 2)));
-                    /*if (!b)
-                    {
-                        //System.Diagnostics.Debug.WriteLine(RadiationGrid.GetIntensity(RadiationGrid.R, RadiationGrid.stepFi));
-                        System.Diagnostics.Debug.WriteLine("{0} {1} {2} {3}", r, cosFi, suppressionR, Math.Sqrt(1 - Math.Pow(suppressionFi, 2)));
-                        System.Diagnostics.Debug.WriteLine(dist);
-                    }*/
                     double I = Burger(prevI, dist, absorbCoef) +
                     timeCoef * AnglePart(cosFi + RadiationGrid.stepFi / 2, cosFi - RadiationGrid.stepFi/2) *
                     Square((int)Math.Round(r / RadiationGrid.stepR), RadiationGrid.stepR) *
@@ -201,6 +192,8 @@ namespace EntertainingExplosion.Core.Engine
 
             for(int i = 0; i < oldGrid.Cells.Count; i++)
             {
+                
+
                 double balance = 0;
                 for(double cosFi = -1 + RadiationGrid.stepFi; cosFi < 0; cosFi += RadiationGrid.stepFi)
                 {
@@ -214,18 +207,8 @@ namespace EntertainingExplosion.Core.Engine
                     balance += RadiationGrid.GetIntensity(i * RadiationGrid.stepR, cosFi);
                 }
                 oldGrid.Cells[i].Temperature = NewTemperature(balance, oldGrid.Cells[i], i);
-
             }
-
-            if (!b)
-            {
-                /*for (double r = 0; r <= RadiationGrid.R; r += RadiationGrid.stepR)
-                {
-                    for (double fi = -1; fi <= 1; fi += RadiationGrid.stepFi)
-                        System.Diagnostics.Debug.Write(RadiationGrid.GetIntensity(r, fi) + "  ");
-                    System.Diagnostics.Debug.WriteLine("\n");
-                }*/
-            }
+            
             b = true;
             return oldGrid;
         }

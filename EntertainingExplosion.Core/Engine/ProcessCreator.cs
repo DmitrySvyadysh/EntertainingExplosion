@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using EntertainingExplosion.Core.Models;
+using EntertainingExplosion.Core.Helpers;
 
 namespace EntertainingExplosion.Core.Engine
 {
@@ -43,12 +44,21 @@ namespace EntertainingExplosion.Core.Engine
         {
             var nextRadGrid = RadiationRecounter.CreateNewGrid(prevGrid, deltaTime);
             var nextGasDynGrid =  GasDynRecounter.CreateNewGrid(nextRadGrid, deltaTime);
-            return nextGasDynGrid;
+
+            for (int i = 0; i < nextGasDynGrid.Cells.Count; i++)
+            {
+                if (nextGasDynGrid.Cells[i].Temperature < 0)
+                    nextGasDynGrid.Cells[i].Temperature = 0;
+                if (nextGasDynGrid.Cells[i].Temperature < 0)
+                {
+                    for (double fi = -1; fi <= 1; fi += RadiationGrid.stepFi)
+                        System.Diagnostics.Debug.WriteLine(nextGasDynGrid.Cells[i].Temperature);
+                }
+            }
 
             // TODO:
-
-            /*var nextRadiationGrid = */
-            //return GridHelper.GetAverageGrid(nextGasDynGrid, nextRadiationGrid);
+            
+            return GridHelper.GetAverageGrid(nextGasDynGrid, nextRadGrid);
         }
     }
 }
