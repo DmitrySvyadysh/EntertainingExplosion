@@ -43,6 +43,7 @@ namespace EntertainingExplosion.Core.Engine
         {
             var nextRadGrid = RadiationRecounter.CreateNewGrid(prevGrid, deltaTime);
             var nextGasDynGrid =  GasDynRecounter.CreateNewGrid(nextRadGrid, deltaTime);
+
             return nextGasDynGrid;
         }
     }
