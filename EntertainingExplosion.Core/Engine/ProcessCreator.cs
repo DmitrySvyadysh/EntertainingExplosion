@@ -38,11 +38,11 @@ namespace EntertainingExplosion.Core.Engine
             }
             return process;
         }
-
+        public static bool b = true;
         private Grid GetNewGrid(Grid prevGrid, double deltaTime)
         {
-            var nextGasDynGrid = GasDynRecounter.CreateNewGrid(prevGrid, deltaTime);
-            RadiationRecounter.CreateNewGrid(prevGrid, deltaTime);
+            var nextRadGrid = RadiationRecounter.CreateNewGrid(prevGrid, deltaTime);
+            var nextGasDynGrid =  GasDynRecounter.CreateNewGrid(nextRadGrid, deltaTime);
             return nextGasDynGrid;
 
             // TODO:
