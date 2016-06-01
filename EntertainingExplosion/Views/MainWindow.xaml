@@ -22,7 +22,7 @@
     </Grid.RowDefinitions>
 
     <views:PlotView PlotModel="{Binding RelativeSource={RelativeSource AncestorType=views:MainWindow}, 
-                      Path=DataContext.IzlucheniePlotModel, Mode=TwoWay}"
+                      Path=DataContext.RadiationIntensityPlotModel, Mode=TwoWay}"
                     Grid.Column="0" 
                     Grid.Row="0" 
                     Padding="10"/>

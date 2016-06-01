@@ -17,7 +17,7 @@ namespace EntertainingExplosion.ViewModels
         private PlotModel pressurePlotModel;
         private PlotModel speedPlotModel;
         private PlotModel internalEnergyPlotModel;
-        private PlotModel izlucheniePlotModel;
+        private PlotModel radiationIntensityPlotModel;
         
         private ICommand prevTickCommand;
         private ICommand nextTickCommand;
@@ -80,12 +80,12 @@ namespace EntertainingExplosion.ViewModels
             }
         }
 
-        public PlotModel IzlucheniePlotModel
+        public PlotModel RadiationIntensityPlotModel
         {
-            get { return izlucheniePlotModel; }
+            get { return radiationIntensityPlotModel; }
             set
             {
-                izlucheniePlotModel = value;
+                radiationIntensityPlotModel = value;
                 OnPropertyChanged();
             }
         }
@@ -177,7 +177,7 @@ namespace EntertainingExplosion.ViewModels
             PressurePlotModel = PlotHelper.CreatePressurePlot(grid);
             SpeedPlotModel = PlotHelper.CreateSpeedPlot(grid);
             InternalEnergyPlotModel = PlotHelper.CreateEnergyPlot(grid);
-            IzlucheniePlotModel = PlotHelper.CreateIzlucheniePlot(grid);
+            RadiationIntensityPlotModel = PlotHelper.CreateRadiationIntensityPlot(grid);
         }
 
         private void GoPrevTick()

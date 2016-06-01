@@ -13,12 +13,12 @@ namespace EntertainingExplosion.InitialData
         private const double ExplosionCellTemperature = 10000;
         private const double ExplosionCellDensity = 1.29;
 
-        private const int UsualCellsCount = 40;
+        private const int UsualCellsCount = 80;
         private const double UsualCellTemperature = 300;
         private const double UsualCellDensity = 1.29;
 
-        private const double DeltaTime = 0.00005;
-        private const int TicksCount = 1000;
+        private const double DeltaTime = 0.000001;
+        private const int TicksCount = 200000;
 
         public InitialProcess CreateInitialProcess()
         {

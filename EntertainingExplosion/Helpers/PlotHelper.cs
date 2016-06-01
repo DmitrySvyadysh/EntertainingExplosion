@@ -65,14 +65,14 @@ namespace EntertainingExplosion.Helpers
             };
         }
 
-        public static PlotModel CreateIzlucheniePlot(Grid grid)
+        public static PlotModel CreateRadiationIntensityPlot(Grid grid)
         {
             return new PlotModel
             {
-                PlotName = Strings.IzlucheniePlotTitle,
+                PlotName = Strings.RadiationIntensityPlotTitle,
                 AbscissaName = Strings.Radius,
-                OrdinateName = Strings.Izluchenie,
-                Points = CreateDataPoints(grid, c => c.Izluchenie)
+                OrdinateName = Strings.RadiationIntensity,
+                Points = CreateDataPoints(grid, c => c.RadiationIntensity)
             };
         }
 

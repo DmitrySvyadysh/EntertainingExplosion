@@ -115,24 +115,6 @@ namespace EntertainingExplosion.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Izluchenie.
-        /// </summary>
-        internal static string Izluchenie {
-            get {
-                return ResourceManager.GetString("Izluchenie", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Izluchenie plot.
-        /// </summary>
-        internal static string IzlucheniePlotTitle {
-            get {
-                return ResourceManager.GetString("IzlucheniePlotTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Molar mass: {0}.
         /// </summary>
         internal static string MolarMassInfoFormat {
@@ -156,6 +138,24 @@ namespace EntertainingExplosion.Resources {
         internal static string PressurePlotTitle {
             get {
                 return ResourceManager.GetString("PressurePlotTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Radiation intensity.
+        /// </summary>
+        internal static string RadiationIntensity {
+            get {
+                return ResourceManager.GetString("RadiationIntensity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Radiation intensity plot.
+        /// </summary>
+        internal static string RadiationIntensityPlotTitle {
+            get {
+                return ResourceManager.GetString("RadiationIntensityPlotTitle", resourceCulture);
             }
         }
         

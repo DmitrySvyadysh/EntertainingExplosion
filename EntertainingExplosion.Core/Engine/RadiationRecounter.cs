@@ -80,7 +80,7 @@ namespace EntertainingExplosion.Core.Engine
                 double prevI = RadiationGrid.GetIntensity(r + RadiationGrid.stepR, -1);
                 double I = InitializeBounds(-1, oldGrid, prevI, r);
                 RadiationGrid.SetIntensity(r, -1, I);
-                oldGrid.Cells[(int)Math.Round(r / RadiationGrid.stepR)].Izluchenie += I;
+                oldGrid.Cells[(int)Math.Round(r / RadiationGrid.stepR)].RadiationIntensity += I;
             }
 
             RadiationGrid.SetIntensity(0, 1, RadiationGrid.GetIntensity(0, -1));
@@ -90,7 +90,7 @@ namespace EntertainingExplosion.Core.Engine
                 double prevI = RadiationGrid.GetIntensity(r - RadiationGrid.stepR, 1);
                 double I = InitializeBounds(1, oldGrid, prevI, r - RadiationGrid.stepR);
                 RadiationGrid.SetIntensity(r, 1, I);
-                oldGrid.Cells[(int)Math.Round((r - RadiationGrid.stepR) / RadiationGrid.stepR)].Izluchenie += I;
+                oldGrid.Cells[(int)Math.Round((r - RadiationGrid.stepR) / RadiationGrid.stepR)].RadiationIntensity += I;
             }
 
             for (double cosFi = -1 + RadiationGrid.stepFi; cosFi <= 0; cosFi += RadiationGrid.stepFi)
@@ -138,7 +138,7 @@ namespace EntertainingExplosion.Core.Engine
                     Math.Pow(oldGrid.Cells[(int)Math.Round(r / RadiationGrid.stepR)].Temperature, 4),
                     dist, absorbCoef);
                     RadiationGrid.SetIntensity(r, cosFi, I);
-                    oldGrid.Cells[(int)Math.Round(r / RadiationGrid.stepR)].Izluchenie += I;
+                    oldGrid.Cells[(int)Math.Round(r / RadiationGrid.stepR)].RadiationIntensity += I;
                 }
             }
 
@@ -195,7 +195,7 @@ namespace EntertainingExplosion.Core.Engine
                     Math.Pow(oldGrid.Cells[(int)Math.Round((r - RadiationGrid.stepR) / RadiationGrid.stepR)].Temperature, 4),
                     dist, absorbCoef);
                     RadiationGrid.SetIntensity(r, cosFi, I);
-                    oldGrid.Cells[(int)Math.Round((r - RadiationGrid.stepR) / RadiationGrid.stepR)].Izluchenie += I;
+                    oldGrid.Cells[(int)Math.Round((r - RadiationGrid.stepR) / RadiationGrid.stepR)].RadiationIntensity += I;
                 }
             }
 

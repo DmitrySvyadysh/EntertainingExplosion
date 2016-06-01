@@ -18,6 +18,6 @@
 
         public double Speed { get; set; }
 
-        public double Izluchenie { get; set; }
+        public double RadiationIntensity { get; set; }
     }
 }

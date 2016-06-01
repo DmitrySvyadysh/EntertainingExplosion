@@ -135,12 +135,6 @@
   <data name="HeatCapacityRatioInfoFormat" xml:space="preserve">
     <value>Heat capacity ratio: {0}</value>
   </data>
-  <data name="Izluchenie" xml:space="preserve">
-    <value>Izluchenie</value>
-  </data>
-  <data name="IzlucheniePlotTitle" xml:space="preserve">
-    <value>Izluchenie plot</value>
-  </data>
   <data name="MolarMassInfoFormat" xml:space="preserve">
     <value>Molar mass: {0}</value>
   </data>
@@ -149,6 +143,12 @@
   </data>
   <data name="PressurePlotTitle" xml:space="preserve">
     <value>Pressure plot</value>
+  </data>
+  <data name="RadiationIntensity" xml:space="preserve">
+    <value>Radiation intensity</value>
+  </data>
+  <data name="RadiationIntensityPlotTitle" xml:space="preserve">
+    <value>Radiation intensity plot</value>
   </data>
   <data name="Radius" xml:space="preserve">
     <value>Radius</value>
