@@ -66,7 +66,7 @@ namespace EntertainingExplosion.Core.Engine
 
         public static Grid CreateNewGrid(Grid oldGrid, double deltaTime)
         {
-            timeCoef = Math.Pow(10,-15);
+            timeCoef = deltaTime * Math.Pow(10,-11);
             absorbCoef = 0.05;
             ellipseCoef = 0.4;
 
